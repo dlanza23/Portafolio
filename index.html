@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web </title>
+    <i class="fa-solid fa-briefcase"></i>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="#">D</a>
+        </div>
+        <nav class="nav">
+            <a href="#hero" class="btn btn-nav">Start</a>
+
+            <div class="dropdown">
+                <button class="btn btn-nav dropdown-toggle" id="projects-dropdown-btn">Projects</button>
+                
+                <div class="dropdown-menu" id="projects-menu">
+                    <a href="#backend" class="dropdown-item">Backend Projects</a>
+                    <a href="#web-design" class="dropdown-item">Web Design</a>
+                    <a href="#others" class="dropdown-item">Others Projects</a>
+                </div>
+            </div>
+            
+            <!--<a href="https://wa.me/584140891908?text=Hola,%20quiero%20más%20información." 
+            target="_blank" 
+            class="btn btn-whatsapp" 
+            title="Contactar por WhatsApp">
+                <i class="fab fa-whatsapp"></i> Contact
+            </a>-->
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <p class="greeting">Hi, my name is</p>
+            <h1 class="main-title">Diego Lanza.</h1>
+            <h2 class="sub-title">I build things for the web.</h2>
+            <p class="description">I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products at <a href="#" class="link-highlight">Upstatement</a>.</p>
+        </section>
+
+        <section id="backend" class="projects-section">
+            <h2 class="section-heading"><span>01.</span> Backend Projects</h2>
+            <!--PROYECTOS-->
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="backend-carousel-wrapper">
+                    <!--First Project: Social Media-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">API RESTFULL: Social Media</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/red social 2.jpeg" alt="Descriptitn project 1" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>Developed a robust RESTful API for a social media platform, including JWT user authentication, user management, and direct messaging.</p>
+                                    <a href="https://github.com/dlanza23/NEXUS-GEEKS/tree/main/BACKEND" class="project-link-overlay" target="_blank">View Details &rarr; </a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fab fa-node-js" title="Node.js"></i>
+                                <i class="fab fa-express" title="Express.js"></i>
+                                <i class="fas fa-database" title="MongoDB"></i>
+                                <i class="fas fa-lock" title="JWT"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Second Project: E-commerce-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">API RESTFULL: E-commerce</h3>
+                            <div class="project-image-wrapper">
+                                <img src="Src/tienda online.jpeg" alt="Description del project 2" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>I developed a robust RESTful API for an e-commerce platform, including JWT user authentication, user management, product reviews, and access to all the necessary features for users to make their purchases.</p>
+                                    <a href="https://github.com/dlanza23/E-comerce" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fab fa-node-js" title="Node.js"></i>
+                                <i class="fab fa-express" title="Express.js"></i>
+                                <i class="fas fa-database" title="MongoDB"></i>
+                                <i class="fas fa-lock" title="JWT"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Third Project: User Management App-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">API RESTFULL: User Management App</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/gestion de proyectos.jpeg" alt="Description del project 3" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>Task management app with user authentication developed with Python and Flask.</p>
+                                    <a href="https://github.com/dlanza23/App-Management" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fab fa-flask" title="Flask"></i>
+                                <i class="fas fa-database" title="PostgreSQL"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fourth  Project: Quiz master-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">Quiz Master</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/quiz.jpeg" alt="Description project 4" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>dynamic questionnaire generator using AI.</p>
+                                    <a href="https://github.com/dlanza23/Quiz-Master" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fab fa-flask" title="Flask"></i>
+                                <i class="fas fa-database" title="PostgreSQL"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fifth Project: Movie reservation-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">Movie Reservation System</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/reservas de eepeliculas.jpeg" alt="Description project 5" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>Implementation of a movie reservation system.</p>
+                                    <a href="https://github.com/dlanza23/Movier-Reservation" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fab fa-node-js" title="Node.js"></i>
+                                <i class="fab fa-express" title="Express.js"></i>
+                                <i class="fas fa-database" title="MongoDB"></i>
+                                <i class="fas fa-lock" title="JWT"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                
+                <button class="carousel-btn prev-btn" data-target="backend-carousel-wrapper">&#10094;</button>
+                <button class="carousel-btn next-btn" data-target="backend-carousel-wrapper">&#10095;</button>
+            </div>
+            <!--TEXTO FINAL-->
+            <p class="section-footer-text">
+                My backend approach focuses on efficiency and security. I develop scalable solutions using industry best practices, ensuring that each project not only meets requirements but is also prepared for future growth. If you're looking for robust systems, you've come to the right place.
+            </p>
+            <!--CV-->
+            <div class="cv-download-container">
+                <a href="https://drive.google.com/drive/folders/10cYC34vmshCmNmgWJ52XAsYdWl-U3Mrc?usp=sharing" download class="btn btn-primary btn-cv" target="_blank">
+                    Download CV
+                </a>
+            </div>
+        </section>
+        
+        <section id="web-design" class="projects-section">
+            <h2 class="section-heading"><span>02.</span> Web Design</h2>
+            <!--PROYECTOS-->
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="web-design-carousel-wrapper">
+                    <!--E-comerce figma-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">E-commerce page design with Figma</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/ecommerce-3-1024x502.png" alt="Description project 1" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>An e-commerce model designed entirely with Figma. This work shows all the views of the website.</p>
+                                    <a href="https://www.behance.net/gallery/233645775/Diseno-de-una-E-comerce-con-Figma" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fa-brands fa-figma"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Tech news-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">Tech news page design</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/tech.webp" alt="Description project 2" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>Design of the newspaper's homepage about tech news.</p>
+                                    <a href="https://dlanza23.github.io/TechNews/" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--web desing-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">Various views with Figma</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/web.jpg" alt="Description project 3" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>Multiple web design views. All were designed with Figma..</p>
+                                    <a href="https://www.behance.net/gallery/230093705/Portafolio-de-disenos-web-y-moviles" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fa-brands fa-figma"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--To do list-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">To do list</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/Todo List App using HTML CSS & JavaScript.jpg" alt="Description project 2" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>Web todo list designed with html css and javascript.</p>
+                                    <a href="https://dlanza23.github.io/To-Do-List-web/" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Mate Game-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">children's math game</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/mathematics-1044087_1920.jpg" alt="Description project 5" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>Math game for teaching elementary school children with HTML, CSS, and JavaScript.</p>
+                                    <a href="https://dlanza23.github.io/trabajo/" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn prev-btn" data-target="backend-carousel-wrapper">&#10094;</button>
+                <button class="carousel-btn next-btn" data-target="backend-carousel-wrapper">&#10095;</button>
+            </div>
+            <!--TEXTO FINAL-->
+            <p class="section-footer-text">
+                My design approach focuses on engaging designs while maintaining simplicity and ease of use and user orientation. Applying industry best practices, I ensure that each project not only meets requirements but is also prepared for future growth..
+            </p>
+            <!--CV-->
+            <div class="cv-download-container">
+                <a href="https://drive.google.com/drive/folders/1K117xZvNZblwL4iO0ySo4Zqaz8armWee?usp=sharing" download class="btn btn-primary btn-cv" target="_blank">
+                    Download CV
+                </a>
+            </div>
+        </section>
+        
+        <section id="others" class="projects-section">
+            <h2 class="section-heading"><span>03.</span> Others Projects</h2>
+            <!--PROYECTOS-->
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="others-carousel-wrapper">
+                    <!--SYSTES REGISTER-->        
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">payment registration system with Excel</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/registro.png" alt="Description projecto 1" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>A multi-vendor payment registration system that organizes payment records by date based on the receipt number. The system allows users to register, delete, and migrate payments..</p>
+                                    <a href="https://drive.google.com/drive/folders/1dRsJkby7l996NZvhynmBH76l7tNUdZ7c?usp=sharing" class="project-link-overlay" target="_blank">View Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fa-solid fa-file-excel"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Strategic planning-->
+                    <div class="carousel-slide">
+                        <div class="project-card">
+                            <h3 class="project-title">Strategic planning</h3>
+                            <div class="project-image-wrapper">
+                                <img src="./Src/pe.jpg" alt="Description project 2" class="project-image">
+                                
+                                <div class="project-description-overlay">
+                                    <p>Final degree thesis topic: Strategic planning.</p>
+                                    <a href="https://drive.google.com/drive/folders/1OetOErzXFPyTxXUXqVfpAzS-TKjyoPv7?usp=sharing" class="project-link-overlay" target="_blank">VIew Details &rarr;</a>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-icons">
+                                <i class="fa-solid fa-file-word"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn prev-btn" data-target="backend-carousel-wrapper">&#10094;</button>
+                <button class="carousel-btn next-btn" data-target="backend-carousel-wrapper">&#10095;</button>
+            </div>
+            <!--TEXTO FINAL-->
+            <p class="section-footer-text">
+                In this section I showcase other skills, both closely and unrelated to programming.
+            </p>
+            <!--CV-->
+            <div class="cv-download-container">
+                <a href="https://drive.google.com/drive/folders/1K117xZvNZblwL4iO0ySo4Zqaz8armWee?usp=sharing" download class="btn btn-primary btn-cv" target="_blank">
+                    Download CV
+                </a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <!--<div class="social-links">
+            <a href="URL_FACEBOOK" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="URL_INSTAGRAM" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/dlanza23" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:dlanza2399@gmail.com" target="_blank" title="Enviar Correo">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>-->
+        
+        <div class="copyright">
+            <p>Designed and built by [Diego Lanza] &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

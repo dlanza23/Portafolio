@@ -1,0 +1,583 @@
+/* Variables de color para fácil mantenimiento */
+:root {
+    --dark-navy: #0A192F;
+    --navy: #112240;
+    --light-navy: #233554;
+    --green: #64FFDA; /* Color de acento */
+    --lightest-slate: #CCD6F6;
+    --slate: #8892B0;
+
+    /* Fuentes */
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+}
+
+/* Reset y estilos generales */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark-navy);
+    color: var(--lightest-slate);
+    font-family: var(--font-sans);
+    line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografía y Enlaces */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--lightest-slate);
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+a:hover, a:focus {
+    color: var(--green);
+}
+
+/* Contenedor principal de secciones */
+main {
+    /* AJUSTE CLAVE: Añadimos 80px de padding-bottom para que el footer fijo no tape el contenido */
+    padding: 100px 150px 80px 150px; 
+    margin: 0 auto;
+}
+
+/* --- ESTILOS DE BOTONES BASE --- */
+.btn {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 13px;
+    font-family: var(--font-mono);
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/* --- 1. HEADER / NAV - FIJO --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 100px;
+    
+    /* PROPIEDADES FIJAS */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(10, 25, 47, 0.85); 
+    backdrop-filter: blur(10px);
+}
+
+/* --- LOGO 'B' CON FORMA --- */
+.logo a {
+    font-size: 20px; 
+    font-weight: bold;
+    color: var(--green);
+    font-family: var(--font-mono);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--green); 
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.logo a:hover {
+    transform: none; 
+    background-color: rgba(100, 255, 218, 0.1); 
+}
+
+
+/* --- NAVEGACIÓN Y BOTONES --- */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.btn-nav {
+    padding: 0.75rem 1rem;
+    font-size: 13px;
+}
+
+/* --- BOTÓN WHATSAPP --- */
+.btn-whatsapp {
+    color: #fff;
+    background-color: #25D366; 
+    border: 1px solid #25D366;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-mono);
+}
+
+.btn-whatsapp i {
+    margin-right: 8px; 
+    font-size: 16px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1DA851; 
+    border-color: #1DA851;
+}
+
+/* --- MENÚ DESPLEGABLE (DROPDOWN) --- */
+.dropdown {
+    position: relative; 
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: calc(100% + 5px); 
+    right: 0; 
+    min-width: 180px;
+    background-color: var(--navy); 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    z-index: 10;
+    border-radius: 4px;
+    padding: 10px 0;
+}
+
+.dropdown-item {
+    color: var(--lightest-slate);
+    padding: 12px 16px;
+    display: block;
+    font-size: 14px;
+    font-family: var(--font-mono);
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-navy); 
+    color: var(--green);
+}
+
+.show {
+    display: block;
+}
+
+
+/* --- 2. HERO SECTION --- */
+.hero-section {
+    min-height: calc(100vh - 100px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.greeting {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: clamp(40px, 8vw, 80px); 
+    margin-bottom: 5px;
+}
+
+.sub-title {
+    color: var(--slate);
+    font-size: clamp(40px, 7vw, 80px);
+    margin-bottom: 25px;
+}
+
+.description {
+    max-width: 540px;
+    color: var(--slate);
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.link-highlight {
+    color: var(--green);
+}
+
+.btn-primary {
+    font-size: 14px;
+    padding: 1rem 1.5rem;
+    max-width: 200px;
+}
+
+
+/* --- 3. SECCIONES DE PROYECTOS (CARRUSEL VISUAL) --- */
+.projects-section {
+    min-height: 100vh;
+    /* AJUSTE CLAVE: Reducimos el padding inferior de 100px a 50px */
+    padding: 100px 0 50px 0; 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: clamp(26px, 5vw, 32px);
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.section-heading span {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 20px;
+    margin-right: 10px;
+}
+.section-heading::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--light-navy);
+}
+
+/* --- ESTILOS DEL CARRUSEL --- */
+.carousel-container {
+    position: relative;
+    overflow: hidden; 
+    padding: 0 50px; 
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.carousel-slide {
+    flex: 0 0 100%; 
+    width: 100%;
+    padding: 20px; 
+}
+
+/* --- ESTILOS DE LA TARJETA DE PROYECTO --- */
+.project-card {
+    background-color: var(--navy); 
+    border-radius: 8px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    overflow: hidden; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-title {
+    color: var(--lightest-slate);
+    font-size: 24px;
+    padding: 25px 20px 15px;
+    margin: 0;
+}
+
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1; 
+}
+
+.project-image {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* DESCRIPCIÓN EN OVERLAY (HOVER) */
+.project-description-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 25, 47, 0.9); 
+    color: var(--lightest-slate);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.project-card:hover .project-description-overlay {
+    opacity: 1; 
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05); 
+}
+
+
+.project-description-overlay p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--slate);
+}
+
+.project-link-overlay {
+    color: var(--green);
+    font-family: var(--font-mono);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+/* ICONOS DE TECNOLOGÍAS */
+.tech-icons {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--light-navy); 
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.tech-icons i {
+    font-size: 24px;
+    color: var(--green); 
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-icons i:hover {
+    transform: translateY(-5px); 
+    color: var(--lightest-slate); 
+}
+
+
+/* --- ESTILOS DE LOS BOTONES DE NAVEGACIÓN --- */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 25, 47, 0.7);
+    color: var(--green);
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 5;
+    transition: background 0.3s;
+    border-radius: 4px;
+}
+
+.prev-btn {
+    left: 0; 
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* --- ESTILOS PARA EL PÁRRAFO DE CIERRE DE SECCIÓN --- */
+.section-footer-text {
+    max-width: 650px; 
+    /* Margen ajustado: 30px arriba, 0 abajo */
+    margin: 30px auto 0 auto; 
+    text-align: center;
+    color: var(--slate); 
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.section-footer-text::before {
+    content: "—";
+    display: block;
+    color: var(--green);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* --- 4. ESTILOS DEL PIE DE PÁGINA (FOOTER) - AHORA FIJO --- */
+
+.footer {
+    position: fixed; /* Fija el elemento en la ventana */
+    bottom: 0;      /* Fija a la parte inferior */
+    left: 0;
+    right: 0;
+    
+    padding: 15px 0; /* Espaciado más pequeño */
+    width: 100%;
+    z-index: 90; /* Asegura que esté sobre el contenido */
+    
+    background-color: var(--dark-navy);
+    border-top: 1px solid var(--light-navy); 
+
+    text-align: center;
+    color: var(--slate);
+    font-family: var(--font-mono); 
+    font-size: 13px;
+}
+
+/* --- Redes Sociales --- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 5px; /* Reducimos el margen para la barra fija */
+    gap: 20px; 
+}
+
+.social-links a {
+    color: var(--slate); 
+    padding: 5px; /* Reducimos el padding para la barra fija */
+    font-size: 18px; 
+    line-height: 1; 
+}
+
+.social-links a:hover {
+    color: var(--green); 
+    transform: translateY(-3px); 
+}
+
+/* --- Copyright --- */
+.copyright p {
+    margin: 0;
+}
+
+/* ======================================================= */
+/* --- 5. RESPONSIVE DESIGN (Pantallas Medianas - Max 1080px) --- */
+/* ======================================================= */
+@media (max-width: 1080px) {
+    /* Ajuste de padding principal */
+    main {
+        padding: 100px 100px 80px 100px;
+    }
+}
+
+/* ======================================================= */
+/* --- 6. RESPONSIVE DESIGN (Pantallas Pequeñas - Max 768px) --- */
+/* ======================================================= */
+@media (max-width: 768px) {
+    /* --- AJUSTE GLOBAL DE PADDING --- */
+    main {
+        /* Reducimos el padding horizontal a 50px */
+        padding: 80px 50px 80px 50px; 
+    }
+
+    /* Reducir el tamaño de la fuente de los títulos principales */
+    .main-title {
+        font-size: clamp(40px, 9vw, 70px); 
+    }
+
+    .sub-title {
+        font-size: clamp(35px, 8vw, 65px);
+    }
+    
+    /* --- HEADER / NAVEGACIÓN --- */
+    .header {
+        height: 70px; /* Header más pequeño */
+        padding: 0 25px;
+    }
+
+    /* Ocultamos los botones de navegación y dejamos solo el menú desplegable (opcional) */
+    .nav {
+        gap: 5px; 
+    }
+
+    .btn-nav {
+        padding: 0.5rem 0.75rem; 
+        font-size: 12px;
+    }
+
+    /* Ocultar el botón de WhatsApp en la navegación para ahorrar espacio */
+    .btn-whatsapp {
+        display: none; 
+    }
+
+    /* --- PROYECTOS --- */
+    /* El título de sección ya no tiene la línea lateral */
+    .section-heading::after {
+        width: 100px; /* Reducir la línea */
+        margin-left: 10px;
+    }
+    
+    /* Eliminar el padding horizontal del carrusel para maximizar el espacio */
+    .carousel-container {
+        padding: 0 20px;
+    }
+    
+    /* Centrar los botones del carrusel mejor */
+    .carousel-btn {
+        padding: 10px 5px;
+        font-size: 20px;
+    }
+    
+    /* --- PÁRRAFO DE CIERRE --- */
+    .section-footer-text {
+        max-width: 90%; /* Usar casi todo el ancho disponible */
+        font-size: 15px;
+        margin-top: 25px;
+    }
+}
+
+/* --- ESTILOS DEL BOTÓN DE DESCARGA DE CV AL FINAL DE CADA SECCIÓN --- */
+
+.cv-download-container {
+    text-align: center; /* Centra el botón horizontalmente */
+    margin-top: 40px;   /* Margen para separarlo del párrafo de conclusión */
+    margin-bottom: 20px; /* Margen antes del padding final de la sección */
+}
+
+/* Estilo específico para el botón de CV */
+.btn-cv {
+    font-size: 16px; /* Hacemos el texto un poco más grande para destacarlo */
+    padding: 1.2rem 2.5rem;
+}
+
+/* ======================================================= */
+/* --- 7. RESPONSIVE DESIGN (Pantallas Extra Pequeñas - Max 480px) --- */
+/* ======================================================= */
+@media (max-width: 480px) {
+    /* Ajuste de padding principal */
+    main {
+        padding: 80px 25px 80px 25px;
+    }
+
+    /* Títulos aún más ajustados */
+    .main-title {
+        font-size: clamp(35px, 10vw, 55px); 
+    }
+
+    .sub-title {
+        font-size: clamp(30px, 9vw, 50px);
+    }
+    
+    /* El carrusel necesita más espacio */
+    .carousel-container {
+        padding: 0 5px; 
+    }
+}
