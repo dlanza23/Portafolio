@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Lanza | Portfolio</title>
+    <!-- Iconos de FontAwesome para las redes y proyectos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVBAR (Cristal Esmerilado) -->
+    <header class="header">
+        <div class="logo">
+            <a href="#">D</a>
+        </div>
+        <nav class="nav">
+            <a href="https://drive.google.com/drive/folders/17UFN8XfKnqLmbDZsFZYhod6OcZEp5DKm" target="_blank" class="btn-cv-header">Resume</a>
+            <div class="dropdown">
+                <button class="dropdown-toggle" id="projects-dropdown-btn">Projects <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-menu" id="projects-menu">
+                    <a href="#projects-section" class="dropdown-item" data-filter="backend">Backend</a>
+                    <a href="#projects-section" class="dropdown-item" data-filter="web-design">Web Design</a>
+                    <a href="#projects-section" class="dropdown-item" data-filter="automations">Automations</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (Presentación con foto) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <p class="greeting">Hi, my name is</p>
+                <h1 class="main-title">Diego Lanza.</h1>
+                <h2 class="sub-title">I build things for the web.</h2>
+                <p class="description">I'm a software engineer specializing in building exceptional digital experiences. Currently, I'm focused on developing robust backend logic, clean web designs, and smart automations.</p>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-wrapper">
+                    <img src="./Src/Imagen_de_WhatsApp_2025-12-02_a_las_22.38.46_5bd5d85a-removebg-preview.png" alt="Diego Lanza" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION (Cartelera de Cine con Filtros Inteligentes) -->
+        <section id="projects-section" class="projects-section">
+            <h2 class="section-title">My Projects</h2>
+            
+            <!-- Barra de Herramientas de Filtrado y Orden -->
+            <div class="filter-toolbar">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="backend">Backend</button>
+                    <button class="filter-btn" data-filter="web-design">Web Design</button>
+                    <button class="filter-btn" data-filter="automations">Automations</button>
+                </div>
+                <div class="sort-container">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="recent">Most Recent</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="alphabetical">Alphabetical (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contenedor Automático (La Cartelera) -->
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- Proyecto 1: Real-Time Chat (Backend / WebSockets) -->
+                <div class="project-card" data-category="backend" data-date="202607" data-title="Real-Time Chat App">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="chat-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500" alt="Real-Time Chat App Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Backend & WebSockets</span>
+                        <h3 class="card-title">Real-Time Chat App</h3>
+                        <p class="card-text">Aplicación de mensajería instantánea en tiempo real basada en WebSockets para comunicación bidireccional de baja latencia. Cuenta con gestión de sesiones concurrentes y persistencia de estados.</p>
+                        <ul class="card-tech">
+                            <li>Node.js</li>
+                            <li>Socket.io</li>
+                            <li>JavaScript</li>
+                            <li>CSS3</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/REAL-TIME-CHAT" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Nexus Geeks (Web Design / Frontend) -->
+                <div class="project-card" data-category="web-design" data-date="202606" data-title="Nexus Geeks Platform">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="nexus-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500" alt="Nexus Geeks Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Design & UI/UX</span>
+                        <h3 class="card-title">Nexus Geeks Platform</h3>
+                        <p class="card-text">Plataforma web interactiva diseñada para comunidades de entusiastas de la tecnología. Cuenta con una interfaz moderna optimizada para la experiencia de usuario (UX/UI), componentes modulares y diseño adaptativo.</p>
+                        <ul class="card-tech">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>UI Design</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/NEXUS-GEEKS" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3: Inventory Manager (Backend / Management) -->
+                <div class="project-card" data-category="backend" data-date="202605" data-title="Inventory Manager System">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="inventory-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500" alt="Inventory Manager Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Backend & Control</span>
+                        <h3 class="card-title">Inventory Manager System</h3>
+                        <p class="card-text">Sistema de gestión y control de inventarios diseñado para optimizar el seguimiento de existencias en tiempo real. Implementa operaciones CRUD completas, filtrado inteligente de productos y reportes automatizados de stock mínimo.</p>
+                        <ul class="card-tech">
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Data Management</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/INVENTORY-MANAGER" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4: Production-Ready (Automations / DevOps) -->
+                <div class="project-card" data-category="automations" data-date="202604" data-title="Production-Ready Template">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="production-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=500" alt="Production Ready Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Automations & Architecture</span>
+                        <h3 class="card-title">Production-Ready Template</h3>
+                        <p class="card-text">Plantilla de arquitectura base optimizada para entornos de producción. Implementa automatización de tareas, configuraciones estrictas de variables de entorno y flujos de trabajo optimizados para despliegues estables.</p>
+                        <ul class="card-tech">
+                            <li>JavaScript</li>
+                            <li>Environment Mgmt</li>
+                            <li>Automations</li>
+                            <li>Architecture</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/PROUCTION-READY" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5: BullMQ Message Broker (Automations / Backend) -->
+                <div class="project-card" data-category="automations" data-date="202607" data-title="BullMQ Message Broker">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="bullmq-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500" alt="BullMQ Message Broker Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Automations & Backend</span>
+                        <h3 class="card-title">BullMQ Message Broker</h3>
+                        <p class="card-text">Microservicio de mensajería y procesamiento de tareas asíncronas en segundo plano utilizando BullMQ y Redis. Diseñado para optimizar la concurrencia, manejar reintentos automáticos y ejecutar trabajos pesados de forma distribuida.</p>
+                        <ul class="card-tech">
+                            <li>Node.js</li>
+                            <li>BullMQ</li>
+                            <li>Redis</li>
+                            <li>Message Broker</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/BULLMQ-MESSAGE" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6: Task Manager (Backend / Management) -->
+                <div class="project-card" data-category="backend" data-date="202603" data-title="Task Manager Application">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="tasks-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1512756290469-ec0602e17847?w=500" alt="Task Manager Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Backend & Productivity</span>
+                        <h3 class="card-title">Task Manager Application</h3>
+                        <p class="card-text">Aplicación de gestión de tareas diseñada para optimizar flujos de trabajo de proyectos. Implementa control estricto de estados, asignación de niveles de prioridad y filtrado dinámico de datos para el seguimiento de objetivos.</p>
+                        <ul class="card-tech">
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Productivity Logic</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/TASK-MANAGER" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 7: Books Catalog (Backend / Data Management) -->
+                <div class="project-card" data-category="backend" data-date="202602" data-title="Books Catalog Application">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="books-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=500" alt="Books Catalog Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Backend & Organization</span>
+                        <h3 class="card-title">Books Catalog Application</h3>
+                        <p class="card-text">Aplicación de catálogo digital diseñada para la gestión, almacenamiento e indexación estructurada de colecciones literarias. Implementa motores de búsqueda eficientes por metadatos como autor, género y estado de lectura.</p>
+                        <ul class="card-tech">
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Data Indexing</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/BOOKS" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 8: Crypto Tracker (Web Design / API Integration) -->
+                <div class="project-card" data-category="web-design" data-date="202601" data-title="Crypto Tracker Platform">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="crypto-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=500" alt="Crypto Tracker Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Design & APIs</span>
+                        <h3 class="card-title">Crypto Tracker Platform</h3>
+                        <p class="card-text">Plataforma de monitoreo y análisis de criptomonedas en tiempo real. Integra APIs financieras externas para rastrear cotizaciones de mercado, calcular conversiones de divisas de forma dinámica y presentar tableros limpios.</p>
+                        <ul class="card-tech">
+                            <li>JavaScript</li>
+                            <li>API Rest</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/CRIPTOS" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 9: E-commerce Platform (Web Design / UX-UI) -->
+                <div class="project-card" data-category="web-design" data-date="202601" data-title="E-commerce Full Platform">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="ecommerce-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=500" alt="E-commerce Platform Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Design & UX</span>
+                        <h3 class="card-title">E-commerce Full Platform</h3>
+                        <p class="card-text">Plataforma de comercio electrónico interactiva con interfaz moderna. Implementa gestión dinámica del carrito de compras en tiempo real, catálogo de productos con filtrado intuitivo y diseño adaptivo.</p>
+                        <ul class="card-tech">
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>UX/UI Design</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/E-comerce" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 10: Enterprise Operations (Backend / Business Logic) -->
+                <div class="project-card" data-category="backend" data-date="202601" data-title="Enterprise Operations App">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="work-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500" alt="Enterprise Operations App Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Backend & Business</span>
+                        <h3 class="card-title">Enterprise Operations App</h3>
+                        <p class="card-text">Aplicación orientada a la gestión de operaciones y flujos de trabajo corporativos. Implementa módulos de procesamiento de datos internos, automatización de tareas de oficina y arquitectura escalable.</p>
+                        <ul class="card-tech">
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Business Logic</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/trabajo" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 11: Flask App (Backend / Python) -->
+                <div class="project-card" data-category="backend" data-date="202607" data-title="Flask Python Application">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="flask-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=500" alt="Flask Application Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Backend & Python</span>
+                        <h3 class="card-title">Flask Python Application</h3>
+                        <p class="card-text">Aplicación web y microservicio desarrollado en Python utilizando el microframework Flask. Implementa un sistema de enrutamiento dinámico, renderizado de vistas optimizado y endpoints RESTful eficientes.</p>
+                        <ul class="card-tech">
+                            <li>Python</li>
+                            <li>Flask</li>
+                            <li>Jinja2</li>
+                            <li>REST API</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/FLASK-APP" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 12: URL Shortener (Backend / Algorithms) -->
+                <div class="project-card" data-category="backend" data-date="202607" data-title="Custom URL Shortener">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="shortener-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500" alt="URL Shortener Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Backend & Architecture</span>
+                        <h3 class="card-title">Custom URL Shortener</h3>
+                        <p class="card-text">Servicio backend para el acortamiento de enlaces web mediante algoritmos de codificación de llaves únicas. Implementa redirecciones dinámicas de baja latencia, validación estricta de URLs y almacenamiento indexado.</p>
+                        <ul class="card-tech">
+                            <li>JavaScript</li>
+                            <li>Node.js</li>
+                            <li>REST API</li>
+                            <li>Algorithms</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/URL-SHORTENER" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 13: PROJECT_N8N (Automations / Workflows) -->
+                <div class="project-card" data-category="automations" data-date="202607" data-title="n8n Workflow Automation Engine">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="n8n-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt="n8n Automation Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Automations & Workflows</span>
+                        <h3 class="card-title">n8n Workflow Engine</h3>
+                        <p class="card-text">Orquestación y automatización de procesos empresariales mediante n8n. Integra múltiples APIs, procesamiento dinámico de webhooks y flujos condicionales de datos sin fricción.</p>
+                        <ul class="card-tech">
+                            <li>n8n</li>
+                            <li>Webhooks</li>
+                            <li>API Integration</li>
+                            <li>Automation</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/PROJECT_N8N" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 14: PROJECT_MAKE (Automations / Integrations) -->
+                <div class="project-card" data-category="automations" data-date="202607" data-title="Make Integration Pipelines">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="make-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500" alt="Make Automation Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Automations & Pipelines</span>
+                        <h3 class="card-title">Make Integration Pipelines</h3>
+                        <p class="card-text">Diseño e implementación de escenarios de automatización complejos con Make (Integromat). Optimización de sincronización de datos entre herramientas SaaS y flujos multi-paso autónomos.</p>
+                        <ul class="card-tech">
+                            <li>Make</li>
+                            <li>SaaS Pipelines</li>
+                            <li>Data Sync</li>
+                            <li>Automations</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/PROJECT_MAKE" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 15: IA_AGENTS (Automations / AI) -->
+                <div class="project-card" data-category="automations" data-date="202608" data-title="Autonomous AI Agents">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="ai-agents-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?w=500" alt="AI Agents Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Automations & AI</span>
+                        <h3 class="card-title">Autonomous AI Agents</h3>
+                        <p class="card-text">Sistema de agentes de inteligencia artificial autónomos capaces de razonar, ejecutar herramientas externas y completar tareas complejas de forma automatizada mediante flujos conversacionales y lógica avanzada.</p>
+                        <ul class="card-tech">
+                            <li>AI Agents</li>
+                            <li>Python / Node</li>
+                            <li>LLM Integrations</li>
+                            <li>Automations</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/IA_AGENTS" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 16: CARDS (Web Design / Interactive UI) -->
+                <div class="project-card" data-category="web-design" data-date="202606" data-title="Interactive UI Cards System">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="cards-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500" alt="Cards UI System Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Design & UI Effects</span>
+                        <h3 class="card-title">Interactive UI Cards System</h3>
+                        <p class="card-text">Colección de tarjetas interactivas con efectos de micro-interacciones, animaciones CSS fluidas y maquetación responsive. Enfocado en elevar la experiencia visual del usuario en componentes modernos.</p>
+                        <ul class="card-tech">
+                            <li>HTML5</li>
+                            <li>CSS3 Grid/Flex</li>
+                            <li>JavaScript</li>
+                            <li>UI Micro-interactions</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/CARDS" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://dlanza23.github.io/CARDS/" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 17: VERTICAL-SLIDERS (Web Design / Creative Layouts) -->
+                <div class="project-card" data-category="web-design" data-date="202606" data-title="Creative Vertical Slider">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="slider-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500" alt="Vertical Slider Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Design & Layouts</span>
+                        <h3 class="card-title">Creative Vertical Slider</h3>
+                        <p class="card-text">Slider vertical dinámico e interactivo diseñado para presentaciones visuales de alto impacto. Transiciones sincronizadas de texto e imágenes mediante control de eventos en JavaScript.</p>
+                        <ul class="card-tech">
+                            <li>HTML5</li>
+                            <li>CSS Animations</li>
+                            <li>JavaScript DOM</li>
+                            <li>Creative Layout</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/VERTICAL-SLIDERS" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://dlanza23.github.io/VERTICAL-SLIDERS/" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 18: CINEMA (Web Design / Entertainment UI) -->
+                <div class="project-card" data-category="web-design" data-date="202607" data-title="Cinema Interactive Portal">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="cinema-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500" alt="Cinema Portal Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Design & Entertainment</span>
+                        <h3 class="card-title">Cinema Interactive Portal</h3>
+                        <p class="card-text">Portal interactivo inspirado en plataformas de cine y streaming. Interfaz limpia enfocada en pósteres dinámicos, selección de asientos o carteleras y maquetación web de alto atractivo visual.</p>
+                        <ul class="card-tech">
+                            <li>HTML5</li>
+                            <li>CSS3 Modern</li>
+                            <li>JavaScript</li>
+                            <li>UX/UI Entertainment</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://github.com/dlanza23/CINEMA" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://dlanza23.github.io/CINEMA/" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 19: COMERCE + Figma UI/UX (Web Design / E-Commerce Design) -->
+                <div class="project-card" data-category="web-design" data-date="202608" data-title="E-Commerce Figma UI/UX & Live Demo">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="ecommerce-figma-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1556742049-0a670f4a4591?w=500" alt="E-Commerce UX/UI & Live Demo Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Design & Figma UX/UI</span>
+                        <h3 class="card-title">E-Commerce UI/UX Architecture</h3>
+                        <p class="card-text">Diseño integral de experiencia de usuario (UX) e interfaz visual (UI) para una plataforma de E-commerce moderna. Incluye prototipado navegable en Figma, repositorio de código y despliegue en vivo.</p>
+                        <ul class="card-tech">
+                            <li>Figma</li>
+                            <li>UI/UX Design</li>
+                            <li>HTML5 / CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="card-links">
+                            <!-- Enlace al repositorio del código en GitHub -->
+                            <a href="https://github.com/dlanza23/COMERCE" target="_blank" title="Ver Código en GitHub"><i class="fab fa-github"></i></a>
+                            <!-- Enlace a Behance para el prototipo/diseño de Figma -->
+                            <a href="https://www.behance.net/gallery/233645775/Diseno-de-una-E-comerce-con-Figma" target="_blank" title="Ver Caso de Estudio en Behance"><i class="fab fa-behance"></i></a>
+                            <!-- Enlace a la Demo en Vivo desplegada en GitHub Pages -->
+                            <a href="https://dlanza23.github.io/COMERCE/" target="_blank" title="Ver Demo en Vivo"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 20: UI/UX Figma Portfolio (Web Design / Figma Showcase) -->
+                <div class="project-card" data-category="web-design" data-date="202608" data-title="Web & Mobile Figma Portfolio">
+                    <div class="card-img-container">
+                        <!-- REEMPLAZAR IMAGEN: src="figma-showcase-preview.jpg" cuando tengas captura local -->
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=500" alt="Figma UI/UX Showcase Preview">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-tag">Web Design & Product Design</span>
+                        <h3 class="card-title">Web & Mobile Figma Showcase</h3>
+                        <p class="card-text">Portafolio especializado en diseño de producto digital, arquitectura de información y prototipado interactivo para aplicaciones web y móviles desarrollado íntegramente en Figma.</p>
+                        <ul class="card-tech">
+                            <li>Figma</li>
+                            <li>Mobile UI</li>
+                            <li>Prototyping</li>
+                            <li>Design Systems</li>
+                        </ul>
+                        <div class="card-links">
+                            <!-- Enlace principal a tu caso de estudio en Behance -->
+                            <a href="https://www.behance.net/gallery/230093705/Portafolio-de-disenos-web-y-moviles-con-figma" target="_blank" title="Ver Portafolio en Behance"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Cierre Elegante Estático) -->
+    <footer class="footer">
+        <div class="footer-socials">
+            <a href="https://github.com/dlanza23" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:tu-correo@email.com"><i class="far fa-envelope"></i></a>
+        </div>
+        <p class="footer-text">Designed & Built by Diego Lanza © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
